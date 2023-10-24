@@ -58,7 +58,7 @@ class MongoDBAtlas(object):
             print("No documents found.")
             print("\n")
         FindOnCollectionEnd = time.time()
-        print(f"Tempo de busca na colleção: {round(FindOnCollectionEnd - FindOnCollectionStart,4)} segundos")
+        print(f"Tempo de busca na colleção: {round(FindOnCollectionEnd - FindOnCollectionStart,3)} segundos")
         print("\n")
 
     def Question1(self, collection, empresa, linha, datahora)->None:
@@ -74,7 +74,7 @@ class MongoDBAtlas(object):
         else:
             print("No documents found.")
         Question1End = time.time()
-        print(f"Tempo da Questão 1: {round(Question1End - Question1Start,4)} segundos")
+        print(f"Tempo da Questão 1: {round(Question1End - Question1Start,3)} segundos")
         print("\n")            
 
     def Question2(self, collection)->None:
@@ -88,7 +88,7 @@ class MongoDBAtlas(object):
         else:
             print("No documents found.")
         Question2End = time.time()
-        print(f"Tempo da Questão 2: {round(Question2End - Question2Start,4)} segundos")
+        print(f"Tempo da Questão 2: {round(Question2End - Question2Start,2)} segundos")
         print("\n")
     
     def Question3(self, collection)->None:
@@ -102,7 +102,7 @@ class MongoDBAtlas(object):
         else:
             print("No documents found.")
         Question3End = time.time()
-        print(f"Tempo da Questão 3: {round(Question3End - Question3Start,4)} segundos")
+        print(f"Tempo da Questão 3: {round(Question3End - Question3Start,3)} segundos")
         print("\n")
     
     def Question4(self, collection)->None:
@@ -116,7 +116,7 @@ class MongoDBAtlas(object):
         else:
             print("No documents found.")
         Question4End = time.time()
-        print(f"Tempo da Questão 4: {round(Question4End - Question4Start,4)} segundos")
+        print(f"Tempo da Questão 4: {round(Question4End - Question4Start,3)} segundos")
         print("\n")
     
     def Question5(self, collection)->None:
@@ -130,7 +130,7 @@ class MongoDBAtlas(object):
         else:
             print("No documents found.")
         Question5End = time.time()
-        print(f"Tempo da Questão 5: {round(Question5End - Question5Start,4)} segundos")
+        print(f"Tempo da Questão 5: {round(Question5End - Question5Start,3)} segundos")
         print("\n")
 
 if __name__ == '__main__':
