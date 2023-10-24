@@ -134,7 +134,7 @@ class MongoDBAtlas(object):
         print("\n")
 
 if __name__ == '__main__':
-    uri = os.environ.get('URI')
+    uri = os.environ['URI']
     taskMongo = MongoDBAtlas()
     client = taskMongo.CreateMongoClient(uri)
     if client is not None:
