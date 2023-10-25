@@ -3,6 +3,7 @@ from pymongo.server_api import ServerApi
 import datetime
 import time
 import os
+from dotenv import load_dotenv, dotenv_values
 
 class MongoDBAtlas(object):
 
@@ -134,12 +135,12 @@ class MongoDBAtlas(object):
         print("\n")
 
 if __name__ == '__main__':
-    uri = os.environ['URI']
+    config = dotenv_values(".env")
     taskMongo = MongoDBAtlas()
-    client = taskMongo.CreateMongoClient(uri)
+    client = taskMongo.CreateMongoClient(config['URI'])
     if client is not None:
         collectionLocalizacaoTransporte = taskMongo.GetCollectionFromDB(client, "LocalizacaoTransporte")
-        #taskMongo.FindOnCollection(collectionLocalizacaoTransporte)
+        # taskMongo.FindOnCollection(collectionLocalizacaoTransporte)
         collectionPesquisaSatisfacaoCliente = taskMongo.GetCollectionFromDB(client, "PesquisaSatisfacaoCliente")
         taskMongo.FindOnCollection(collectionPesquisaSatisfacaoCliente,True)
         taskMongo.Question1(collectionLocalizacaoTransporte, "Viação Bonança", "São Vicente / Bandeirantes", "2023-10-18T01:39:37.316Z")
